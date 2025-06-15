@@ -19,7 +19,10 @@ const Sidebar = ({
           {["Jordan", "Lifestyle", "Running", "Basketball", "Training & Gym", "Football"].map(cat => (
             <li key={cat}>
               <button
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setMobileSidebarOpen(false);
+                }}
                 className={`$ {
                   selectedCategory === cat ? "text-black font-bold" : "text-gray-700"
                 } hover:underline`}
@@ -46,7 +49,10 @@ const Sidebar = ({
                   type="radio"
                   name="gender"
                   checked={selectedGender === gender}
-                  onChange={() => setSelectedGender(gender)}
+                  onChange={() => {
+                    setSelectedGender(gender);
+                    setMobileSidebarOpen(false);
+                  }}
                   className="mr-2 accent-black"
                 />
                 {gender}
@@ -66,7 +72,10 @@ const Sidebar = ({
                 type="radio"
                 name="price"
                 checked={selectedPrice === 'under100'}
-                onChange={() => setSelectedPrice('under100')}
+                onChange={() => {
+                  setSelectedPrice('under100');
+                  setMobileSidebarOpen(false);
+                }}
                 className="mr-2 accent-black"
               />
               Under $100
@@ -78,7 +87,10 @@ const Sidebar = ({
                 type="radio"
                 name="price"
                 checked={selectedPrice === '100to200'}
-                onChange={() => setSelectedPrice('100to200')}
+                onChange={() => {
+                  setSelectedPrice('100to200');
+                  setMobileSidebarOpen(false);
+                }}
                 className="mr-2 accent-black"
               />
               $100 - $200
@@ -90,7 +102,10 @@ const Sidebar = ({
                 type="radio"
                 name="price"
                 checked={selectedPrice === 'over200'}
-                onChange={() => setSelectedPrice('over200')}
+                onChange={() => {
+                  setSelectedPrice('over200');
+                  setMobileSidebarOpen(false);
+                }}
                 className="mr-2 accent-black"
               />
               Over $200

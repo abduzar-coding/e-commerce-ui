@@ -4,7 +4,9 @@ const Navbar = ({ setMobileSidebarOpen, cart, setIsCartOpen }) => {
   return (
     <header className="w-full shadow-sm border-b bg-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold tracking-tight">🛒 E-Shop</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-gray-800">
+            <span className="text-black">Abduzar</span><span className="text-gray-500">Shop</span>
+        </h1>
 
         <nav className="hidden md:flex space-x-6 text-sm text-gray-600">
           <a href="#" className="hover:text-black">New</a>
